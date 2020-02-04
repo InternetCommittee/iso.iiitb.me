@@ -1,0 +1,19 @@
+{
+  "name": "iso.iiitb.me",
+  "version": "1.0.0",
+  "description": "ISO server for IIITB",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install pug-cli -g && pug src/index.pug --pretty -o build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InternetCommittee/iso.iiitb.me.git"
+  },
+  "author": "Aravind Reddy V <aravind.reddy@iiitb.org> (https://aravindvoggu.in)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/InternetCommittee/iso.iiitb.me/issues"
+  },
+  "homepage": "https://github.com/InternetCommittee/iso.iiitb.me#readme"
+}

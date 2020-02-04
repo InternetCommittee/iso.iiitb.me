@@ -1,0 +1,80 @@
+include mixins.pug
+
+html(lang="en")
+	head
+		title Download linux ISOs | iiitb.me
+
+		+metatags('Aravind Reddy V (https://aravindvoggu.in) aravind.reddy@iiitb.org')
+		+analytics('UA-151401901-2')
+
+		style
+			include ../css/style.css
+	body
+		h1 ISO | by Internet Committee
+
+		+iso('Ubuntu 64 bit', 'ubuntu',
+			[
+				{'name': 'Ubuntu 18.04.3', 'file': 'ubuntu-18.04.3-desktop-amd64.iso'},
+				{'name': 'Ubuntu 18.04.3 Server', 'file': 'ubuntu-18.04.3-live-server-amd64.iso'},
+				{'name': 'Ubuntu 19.10', 'file': 'ubuntu-19.10-desktop-amd64.iso'},
+				{'name': 'Ubuntu 19.10 Server', 'file': 'ubuntu-19.10-live-server-amd64.iso'}
+			]
+		)
+
+		+iso('Windows', 'windows',
+			[
+				{'name': 'Windows 10 - 1909 English International', 'file': 'Win10_1909_EnglishInternational_x64.iso'},
+			]
+		)
+
+		+iso('Raspbian', 'raspbian',
+			[
+				{'name': 'Raspbian Buster 2019.09.26', 'file': '2019-09-26-raspbian-buster.zip'},
+				{'name': 'Raspbian Buster Lite 2019.09.26', 'file': '2019-09-26-raspbian-buster-lite.zip'},
+			]
+		)
+
+		+iso('Fedora', 'fedora',
+			[
+				{'name': 'Fedora Server 31', 'file': 'Fedora-Server-dvd-x86_64-31-1.9.iso'},
+			]
+		)
+
+		+iso('Debian', 'debian',
+			[
+				{'name': 'Debian 10.2.0 XFCE', 'file': 'debian-10.2.0-amd64-xfce-CD-1.iso'},
+			]
+		)
+
+		+iso('Kali', 'kali',
+			[
+				{'name': 'Kali Linux 2019.4', 'file': 'kali-linux-2019.4-amd64.iso'},
+				{'name': 'Kali Linux 2019.4 KDE', 'file': 'kali-linux-2019.4-kde-amd64.iso'}
+			]
+		)
+
+		+iso('Mac OS', 'macos',
+			[
+				{'name': 'High Sierra', 'file': 'Install macOS High Sierra.app.zip'},
+				{'name': 'Sierra', 'file': 'Install macOS Sierra.zip'}
+			],
+
+			'Mac OS zips may or may not work. They\'re also available on Apple\'s website if you need.'
+		)
+
+		+iso('Kubuntu', 'kubuntu',
+			[
+				{'name': 'Kubuntu 18.04.3 Desktop', 'file': 'kubuntu-18.04.3-desktop-amd64.iso'}
+			]
+		)
+
+		+iso('Cent OS', 'cent',
+			[
+				{'name': 'CentOS 7.1908 Gnome', 'file': 'CentOS-7-x86_64-LiveGNOME-1908.iso'}
+			]
+		)
+
+		p To request more ISOs or to donate an ISO you have, please write to ic@iiitb.org
+
+		script
+			include ../js/script.js

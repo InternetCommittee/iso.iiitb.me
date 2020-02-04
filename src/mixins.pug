@@ -1,0 +1,35 @@
+- var isoBaseURL = 'http://172.16.201.119/iso/'
+
+mixin iso(title, folder, links, comment)
+	details
+		summary #{title}
+		ul
+			each link in links
+				li
+					a(
+						href = isoBaseURL + folder + '/' + link.file
+					) #{link.name}
+		if comment
+			p #{comment}
+
+mixin metatags(author)
+	meta(
+		name="author"
+		content=author
+	)
+
+	meta(charset="UTF-8")
+	meta(name="viewport", content="width=device-width, initial-scale=1.0")
+	meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+mixin analytics(p_ga_id)
+	script.
+		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+		ga('create', '#{p_ga_id}', 'auto');
+		ga('require', 'linkid');
+		ga('send', {
+			hitType: 'pageview',
+			page: location.pathname
+		});
+		ga('set', 'transport', 'beacon');
+	script(async src='https://www.google-analytics.com/analytics.js')
